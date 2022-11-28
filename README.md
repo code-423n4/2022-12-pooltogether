@@ -100,6 +100,30 @@ When suggesting gas optimizations, please run the `yarn test` command and writ
 
 Any report that does not follow the above rule will be disregarded.
 
+## Scoping Details 
+```
+- If you have a public code repo, please share it here:  https://github.com/pooltogether/ERC5164
+- How many contracts are in scope?:   11
+- Total SLoC for these contracts?:  ~354
+- How many external imports are there?:  6
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  2
+- Does most of your code generally use composition or inheritance?: Inheritance  
+- How many external calls?:   3
+- What is the overall line coverage percentage provided by your tests?:  lines: 100.0% (77 of 77 lines)   functions: 90.9% (20 of 22 functions)
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   true
+- Please describe required context:   Need to understand how native bridges for Arbitrum, Optimism and Polygon work
+- Does it use an oracle?:  false
+- Does the token conform to the ERC20 standard?:  There is no ERC20 token to audit
+- Are there any novel or unique curve logic or mathematical models?: No
+- Does it use a timelock function?:  No
+- Is it an NFT?: No
+- Does it have an AMM?: No  
+- Is it a fork of a popular project?: false   
+- Does it use rollups?:   true
+- Is it multi-chain?:  true
+- Does it use a side-chain?: Yes
+```
+
 ## Tests
 
 Follow the [Development section](https://github.com/pooltogether/ERC5164/tree/5647bd84f2a6d1a37f41394874d567e45a97bf48#development) to setup your environment.
