@@ -1,9 +1,9 @@
 # PoolTogether ERC-5164 contest details
-- Total Prize Pool: $24,500 USDC
-  - HM awards: $17,000 USDC
-  - QA report awards: $2,000 USDC
-  - Gas report awards: $1,000
-  - Judge + presort awards: $4,000 USDC
+- Total Prize Pool: $30,200 USDC
+  - HM awards: $22,000 USDC
+  - QA report awards: $2,200 USDC
+  - Gas report awards: $1,100
+  - Judge + presort awards: $4,400 USDC
   - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-12-pooltogether-contest/submit)
