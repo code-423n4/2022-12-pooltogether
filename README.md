@@ -1,6 +1,6 @@
 # PoolTogether ERC-5164 contest details
-- Total Prize Pool: $30,200 USDC
-  - HM awards: $22,000 USDC
+- Total Prize Pool: $26,900 USDC
+  - HM awards: $18,700 USDC
   - QA report awards: $2,200 USDC
   - Gas report awards: $1,100
   - Judge + presort awards: $4,400 USDC
