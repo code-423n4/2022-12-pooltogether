@@ -1,0 +1,289 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2022 / pooltogether-dec1
+==============================================================
+
+[11/30/2022 17:41] kartoonjoy (pinned)
+👋 Hello and welcome to the contest channel for the $26,900 USDC **PoolTogether** contest!
+
+📆 Contest opens 12/01/2022 20:00 (20:00 UTC) and runs through 12/05/2022 20:00 (20:00 UTC) (4 days).
+
+Please give a warm welcome to the PoolTogether team, particularly @Brendan 🌊🏆 and @Pierrick, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-12-pooltogether-contest
+
+{Embed}
+https://code4rena.com/contests/2022-12-pooltogether-contest
+Code4rena PoolTogether contest
+$30,200 USDC
+1 December 2022—5 December 2022
+Code4rena - ARCHIVE-Q4-2022 - pooltogether-dec1 [1047564189448818730].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+👀 
+
+[11/30/2022 17:44] asselstine
+👋  Hi everyone! Excited to be back.  @Pierrick and I have worked hard on putting together an ERC to standardize contract calls across bridges. We're very excited to have the C4 wardens scrutinize the code!
+
+If you have any questions about the specification or implementation, please tag us!
+
+{Reactions}
+👏 (11) pepe_brain 🙏 
+
+[11/30/2022 17:52] kartoonjoy
+Pinned a message.
+
+
+[12/01/2022 06:13] .erensa
+🥳
+
+
+[12/01/2022 07:35] kenzoagada
+Warm welcome back to you C4 OGs 🙂
+
+{Reactions}
+❤️ (3) 
+
+[12/01/2022 22:37] thepicodes (pinned)
+**Automated Findings:** https://gist.github.com/Picodes/f2f3f345fedf02907c2d0faaba542fe7
+
+
+[12/01/2022 22:38] kartoonjoy (pinned)
+Wardens, please note that c4udit output has been posted above and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+Automated Findings: https://gist.github.com/Picodes/f2f3f345fedf02907c2d0faaba542fe7
+
+This will also be linked in the contest README file shortly.
+
+{Embed}
+https://gist.github.com/Picodes/f2f3f345fedf02907c2d0faaba542fe7
+4naly3er-2022-12-pooltogether.md
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q4-2022 - pooltogether-dec1 [1047564189448818730].txt_Files/gist-og-image-17482.png
+
+
+[12/01/2022 22:40] kartoonjoy
+Pinned a message.
+
+
+[12/01/2022 22:40] kartoonjoy
+Pinned a message.
+
+
+[12/02/2022 04:51] chaduke3730
+will work on it
+
+
+[12/02/2022 06:41] road220
+wow, EIP-5164 is truly fascinating thing to play around!
+
+{Reactions}
+🕵️ (2) 👌 
+
+[12/02/2022 12:58] road220
+if you have a picture like that and you're wondering why it takes a lot of time, just wait, everything is ok, indeed it takes about 10 minutes(on my system)
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - pooltogether-dec1 [1047564189448818730].txt_Files/image-B2DD3.png
+
+
+[12/02/2022 17:13] 0xnazgul
+@Pierrick can you add me for dm?
+
+
+[12/02/2022 23:20] ladboy233
+@Pierrick Hi Pierrick can I please DM you?
+
+
+[12/02/2022 23:20] ladboy233
+Thanks.
+
+
+[12/02/2022 23:23] pierrickgt
+Yes, go ahead.
+
+
+[12/03/2022 00:02] ladboy233
+thanks！
+
+
+[12/03/2022 21:00] acegawd
+Dmed you.
+
+
+[12/03/2022 22:44] Franfran#5067
+May I ask you how do you plan to handle sending value along with `relayCalls` ?
+It is explained that the function is payable for that purpose in the EIP, but each `Call` struct takes as a parameter the `target` address and `data` as the calldata. This would work for a single call, but how to manage multiple calls requiring multiple amount of value, like two swaps from ETH to whatever token on a L2 ?
+
+
+[12/03/2022 22:45] Franfran#5067
+Is it going to send all the value with the first call, or should we only use one call if there is value ?
+
+
+[12/04/2022 08:44] demelew
+The contract is used only to call a contract it can’t bridge any value
+
+
+[12/04/2022 08:45] demelew
+In the arbitrum relayer  msg.value is  only used to pay for a fee  you can see in the parameter  that the value arguments is set to zero
+
+{Reactions}
+👍 (2) 
+
+[12/04/2022 08:53] Franfran#5067
+Thanks
+
+
+[12/05/2022 03:51] teawaterwire
+"However, Arbitrum requires an EOA to process the relay" :  can you provide a pointer to Arbitrum's doc where this is mentioned?
+
+
+[12/05/2022 04:04] pierrickgt
+This is the doc mentioning how to send a message from Ethereum to Arbitrum: https://developer.arbitrum.io/for-devs/cross-chain-messsaging#ethereum-to-arbitrum-messaging
+In order to send the message, we need to use the Arbitrum JS SDK to properly estimate the gas that will be required for the message to execute on Arbitrum.
+An example implementation is available in this tutorial: https://github.com/OffchainLabs/arbitrum-tutorials/blob/master/packages/greeter/scripts/exec.js
+
+
+[12/05/2022 05:40] teawaterwire
+hum i see, it's because of this gas estimation. and on Optimism for instance we don't have this constraint because it's only about passing a gasLimit right? (i dm'ed you)
+
+
+[12/05/2022 10:50] road220
+does anyone have any problems with rps urls, specifically with mainnet? Thanks!
+
+{Reactions}
+🤝 
+
+[12/05/2022 16:10] pierrickgt
+Which problem are you facing?
+
+
+[12/05/2022 16:30] road220
+resolved, thanks!
+
+
+[12/05/2022 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **PoolTogether** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+🔥 (15) 
+
+[12/12/2022 05:43] akshaysrivastav
+👀
+
+
+[12/14/2022 16:33] ladboy233
+👀
+
+
+[01/02/2023 15:25] xyzbtchunt
+Any update sir?
+
+
+[01/02/2023 20:16] ladboy233
+👀
+
+
+[01/03/2023 19:49] alextheentreprenerd
+Asked to send to Triage
+
+
+[01/07/2023 21:20] ladboy233
+👀
+
+{Reactions}
+👀 (2) 
+
+[01/11/2023 12:07] xyzbtchunt
+Any update @Alex The Entreprenerd
+
+
+[01/11/2023 13:20] alextheentreprenerd
+Checking in a few hours, basically done
+
+{Reactions}
+🖖 (2) 
+
+[01/11/2023 19:08] chaduke3730
+looking forward to it!
+
+
+[01/12/2023 18:28] ladboy233
+👀👀👀
+
+{Reactions}
+👀 (5) 👁️ (3) 
+
+[01/13/2023 15:02] alextheentreprenerd
+👀
+
+{Reactions}
+👀 (13) 
+
+[01/13/2023 21:48] un_for_given
+https://github.com/code-423n4/code423n4.com/pull/6767
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/6767
+Add PoolTogether results by CloudEllie · Pull Request #6767 · code-...
+Code4rena - ARCHIVE-Q4-2022 - pooltogether-dec1 [1047564189448818730].txt_Files/6767-C7125
+
+{Reactions}
+4739_Skeletor 
+
+[01/13/2023 22:40] liveactionllamac4
+🤑 🎉  Awards for **PoolTogether (December):**
+
+$4,203.70 USDC » @comradeKtg 
+$3,233.62 USDC » @0x52 
+$1,921.21 USDC » @0xladboy | Sparkware 
+$1,755.91 USDC » @AkshaySrivastav 
+$1,702.50 USDC » @cccz 
+$1,309.61 USDC » @csanuragjain 
+$1,309.61 USDC » @Chom 
+$1,309.61 USDC » @hihen 
+$1,309.61 USDC » @enckrish 
+$1,309.61 USDC » @joestakey 
+$795.08 USDC » @0xSmartContract 
+$665.01 USDC » @cryptonue 
+$440.59 USDC » @Tricko 
+$338.92 USDC » @neko_nyaaaaaaaaaaaaaaaaaaaaaaaaa 
+$181.73 USDC » @gzeon 
+$53.42 USDC » @anon 
+$53.42 USDC » @Rolezn 
+$53.42 USDC » @Madalad 
+$53.42 USDC » @adriro 
+
+High risk findings: 0
+Med risk findings: 10 total, 3 unique
+Gas findings: 8
+QA findings: 4
+
+Awards will be distributed on Polygon within the next 1-2 weeks. Congratulations, everyone! 💸 💸 💸
+
+*If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🎉 (5) hi5 (4) C4Keycap 
+
+[01/14/2023 00:25] ladboy233
+:chefskiss: :nice:
+
+{Reactions}
+👍 (4) 
+
+[01/14/2023 01:03] akshaysrivastav
+🤩
+
+{Reactions}
+👍 (3) 
+
+==============================================================
+Exported 45 message(s)
+==============================================================
